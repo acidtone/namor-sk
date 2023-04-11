@@ -1,11 +1,11 @@
 <script>
-  import { nouns } from '$lib/nouns.js';
-  import { randomNumber } from '$lib/utilities.js';
+  import { generatePhrase } from '$lib/phraser.js';
 
   let buttonLabel = 'Click for a Random Band Name!';
   
   const handleClick = () => {
-    buttonLabel = nouns[randomNumber(nouns.length)];
+    buttonLabel = generatePhrase();
+    console.log(buttonLabel);
   }
 
 </script>
