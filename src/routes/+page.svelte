@@ -2,19 +2,13 @@
   import { nouns } from '$lib/nouns.js';
   import { randomNumber } from '$lib/utilities.js';
 
-  console.log(nouns);
-
-  const randIndex = randomNumber(nouns.length);
-
-  console.log(randIndex);
-
-  console.log(nouns[randIndex]);
-
+  let buttonLabel = 'Click for a Random Band Name!';
+  
   const handleClick = () => {
-    console.log("Hello world!");
+    buttonLabel = nouns[randomNumber(nouns.length)];
   }
 
 </script>
 
 <h1>Random Band Name Generator</h1>
-<button on:click={handleClick}>Click for a Random Band Name!</button>
+<button on:click={handleClick}>{buttonLabel}</button>
