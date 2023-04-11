@@ -3,9 +3,18 @@
   import { randomNumber } from '$lib/utilities.js';
 
   console.log(nouns);
-  console.log(randomNumber(nouns.length));
-  console.log(nouns[randomNumber(nouns.length)]);
+
+  const randIndex = randomNumber(nouns.length);
+
+  console.log(randIndex);
+
+  console.log(nouns[randIndex]);
+
+  const handleClick = () => {
+    console.log("Hello world");
+  }
+
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Random Band Name Generator</h1>
+<button on:click={handleClick}>Click for a Random Band Name!</button>
