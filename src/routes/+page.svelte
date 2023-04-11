@@ -11,7 +11,7 @@
   console.log(nouns[randIndex]);
 
   const handleClick = () => {
-    console.log("Hello world");
+    console.log("Hello world!");
   }
 
 </script>
